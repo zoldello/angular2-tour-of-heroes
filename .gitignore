@@ -2,5 +2,4 @@
 .settings
 /dist/*
 /node_modules
-/typing
-/typing/**
+/typings/**
