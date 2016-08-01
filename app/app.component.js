@@ -10,34 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var hero_detail_component_1 = require('./hero-detail.component');
-var HEROES = [
-    { id: 11, name: 'Mr. Nice' },
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubberMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornado' }
-];
+var hero_service_1 = require('./hero.service');
 var AppComponent = (function () {
-    function AppComponent() {
-        this.heroes = HEROES;
+    function AppComponent(heroService) {
+        this.heroService = heroService;
         this.title = 'Tour of Heroes';
     }
     AppComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
+    };
+    AppComponent.prototype.ngOnInit = function () {
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             templateUrl: './app/app.component.html',
             styleUrls: ['styles.css'],
-            directives: [hero_detail_component_1.HeroDetailComponent]
+            directives: [hero_detail_component_1.HeroDetailComponent],
+            providers: [hero_service_1.HeroService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [hero_service_1.HeroService])
     ], AppComponent);
     return AppComponent;
 }());
