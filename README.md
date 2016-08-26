@@ -1,4 +1,8 @@
 # Angular2-Quick-Start-Practice
+
+##Note- This is old code and is deprecated. It is based on RC4. This is a newer version: https://github.com/zoldello/zoldello-angular-tour-of-hero-Updated/tree/master
+
+
 Practicing Angular 2, based on: https://angular.io/docs/ts/latest/quickstart.html
 
 This is a practice-app. 
